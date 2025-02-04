@@ -1,17 +1,4 @@
-import requests
 import random
-
-Champion_url = "https://ddragon.leagueoflegends.com/cdn/15.2.1/data/en_US/champion.json"
-
-def fetch_champions():
-    response = requests.get(Champion_url)
-    if response.status_code == 200:
-        data = response.json()
-        champions = list(data['data'].keys())
-        return champions
-    else:
-        print('Error fetching champion data')
-        return []
 
 ROLE_MAP = {
     "Top": ["Garen", "Darius", "Shen", "Malphite", "Ornn"],
